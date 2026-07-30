@@ -20,6 +20,8 @@ This application automates the daily operations of a veterinary clinic by allowi
 - Store and retrieve clinic data using a relational database
 
 ## Project Structure
+
+```text
 spring-petclinic/
 └── src/
     └── main/
@@ -48,6 +50,7 @@ spring-petclinic/
                             │
                             ├── model/
                             └── system/
+```
 
 ---
 
