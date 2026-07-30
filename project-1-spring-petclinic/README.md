@@ -21,27 +21,33 @@ This application automates the daily operations of a veterinary clinic by allowi
 
 ## Project Structure
 spring-petclinic/
-└── src/main/java/org/springframework/samples/petclinic/
-├── owner/
-│ ├── OwnerController.java
-│ ├── OwnerRepository.java
-│ ├── Owner.java
-│ ├── Pet.java
-│ └── PetType.java
-│
-├── visit/
-│ ├── VisitController.java
-│ ├── VisitRepository.java
-│ └── Visit.java
-│
-├── vet/
-│ ├── VetController.java
-│ ├── VetRepository.java
-│ ├── Vet.java
-│ └── Specialty.java
-│
-├── model/
-└── system/
+└── src/
+    └── main/
+        └── java/
+            └── org/
+                └── springframework/
+                    └── samples/
+                        └── petclinic/
+                            ├── owner/
+                            │   ├── OwnerController.java
+                            │   ├── OwnerRepository.java
+                            │   ├── Owner.java
+                            │   ├── Pet.java
+                            │   └── PetType.java
+                            │
+                            ├── visit/
+                            │   ├── VisitController.java
+                            │   ├── VisitRepository.java
+                            │   └── Visit.java
+                            │
+                            ├── vet/
+                            │   ├── VetController.java
+                            │   ├── VetRepository.java
+                            │   ├── Vet.java
+                            │   └── Specialty.java
+                            │
+                            ├── model/
+                            └── system/
 
 ---
 
