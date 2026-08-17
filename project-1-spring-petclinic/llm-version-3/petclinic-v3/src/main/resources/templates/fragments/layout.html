@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(title)">
+    <meta charset="UTF-8"/>
+    <title th:text="${title} + ' - Vet Clinic'">Vet Clinic</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<div th:fragment="nav">
+    <nav>
+        <a th:href="@{/}">Home</a> |
+        <a th:href="@{/owners/find}">Find owners</a> |
+        <a th:href="@{/vets}">Veterinarians</a>
+    </nav>
+    <hr/>
+</div>
+</body>
+</html>

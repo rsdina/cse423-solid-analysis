@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('New Visit')}"></head>
+<body>
+<div th:replace="~{fragments/layout :: nav}"></div>
+
+<h2>New Visit</h2>
+<p>Pet: <span th:text="${pet.name}"></span> (Owner: <span th:text="${owner.firstName + ' ' + owner.lastName}"></span>)</p>
+
+<form th:object="${visit}" method="post">
+    <p>
+        <label>Visit Date:</label>
+        <input type="date" th:field="*{visitDate}"/>
+    </p>
+    <p>
+        <label>Description:</label>
+        <input type="text" th:field="*{description}"/>
+        <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}" style="color:red;"></span>
+    </p>
+    <button type="submit">Save Visit</button>
+</form>
+</body>
+</html>

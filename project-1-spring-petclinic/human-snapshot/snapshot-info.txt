@@ -1,0 +1,21 @@
+﻿Human Snapshot - Spring PetClinic
+
+Commit: f9424b5
+Date: 2019-12-10
+Description: Spring Boot 2.2.2
+
+Source Repository: Spring PetClinic
+
+Files included:
+1. Owner.java
+2. OwnerController.java
+3. OwnerRepository.java
+4. Pet.java
+5. PetController.java
+6. PetRepository.java
+7. PetType.java
+8. Vet.java
+9. VetController.java
+10. Visit.java
+
+All files were extracted from the same historical commit (f9424b5).

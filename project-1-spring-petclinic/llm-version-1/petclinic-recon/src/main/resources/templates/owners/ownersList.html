@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Owners')}"></head>
+<body>
+<div th:replace="~{fragments/layout :: nav}"></div>
+<h2>Owners</h2>
+<table border="1" cellpadding="6">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>Telephone</th>
+        <th>Pets</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="owner : ${owners}">
+        <td><a th:href="@{'/owners/' + ${owner.id}}" th:text="${owner.firstName + ' ' + owner.lastName}">Name</a></td>
+        <td th:text="${owner.address}">Address</td>
+        <td th:text="${owner.city}">City</td>
+        <td th:text="${owner.telephone}">Telephone</td>
+        <td>
+            <span th:each="pet : ${owner.pets}" th:text="${pet.name} + ' '"></span>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,65 @@
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.metadata/
+
+# Java build output
+*.class
+*.log
+**/target/
+**/build/
+**/out/
+**/bin/
+**/generated/
+**/classes/
+**/test-classes/
+
+# Gradle
+.gradle/
+**/.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+
+# Spring Boot / app runtime
+*.pid
+*.war
+*.jar
+*.crt
+*.key
+.env
+.env.*
+application-local.properties
+
+# Logs
+logs/
+*.log
+
+# Node / frontend artifacts
+node_modules/
+package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# Temporary/editor files
+*.tmp
+*.bak
+*.swp
+*~

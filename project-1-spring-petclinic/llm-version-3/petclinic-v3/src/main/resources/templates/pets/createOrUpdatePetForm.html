@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Pet Form')}"></head>
+<body>
+<div th:replace="~{fragments/layout :: nav}"></div>
+
+<h2 th:text="${pet.id == null} ? 'New Pet' : 'Edit Pet'">Pet Form</h2>
+<p>Owner: <span th:text="${owner.firstName + ' ' + owner.lastName}"></span></p>
+
+<form th:object="${pet}" method="post">
+    <p>
+        <label>Name:</label>
+        <input type="text" th:field="*{name}"/>
+        <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" style="color:red;"></span>
+    </p>
+    <p>
+        <label>Birth Date:</label>
+        <input type="date" th:field="*{birthDate}"/>
+    </p>
+    <p>
+        <label>Type:</label>
+        <select th:field="*{type}">
+            <option th:each="petType : ${types}" th:value="${petType.id}" th:text="${petType.name}"></option>
+        </select>
+    </p>
+    <button type="submit">Save</button>
+</form>
+</body>
+</html>

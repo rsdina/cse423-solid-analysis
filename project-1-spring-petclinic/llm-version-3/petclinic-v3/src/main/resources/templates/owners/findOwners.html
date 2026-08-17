@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Find Owners')}"></head>
+<body>
+<div th:replace="~{fragments/layout :: nav}"></div>
+<h2>Find Owner</h2>
+<p th:if="${message}" th:text="${message}" style="color:red;"></p>
+<form th:action="@{/owners}" method="get">
+    <label for="lastName">Last name:</label>
+    <input type="text" id="lastName" name="lastName"/>
+    <button type="submit">Find Owner</button>
+</form>
+<p><a th:href="@{/owners/new}">Add Owner</a></p>
+</body>
+</html>

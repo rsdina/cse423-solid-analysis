@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Owner Details')}"></head>
+<body>
+<div th:replace="~{fragments/layout :: nav}"></div>
+
+<h2 th:text="${owner.firstName + ' ' + owner.lastName}">Owner Name</h2>
+<table>
+    <tr><th>Address</th><td th:text="${owner.address}"></td></tr>
+    <tr><th>City</th><td th:text="${owner.city}"></td></tr>
+    <tr><th>Telephone</th><td th:text="${owner.telephone}"></td></tr>
+</table>
+<p><a th:href="@{'/owners/' + ${owner.id} + '/edit'}">Edit Owner</a> |
+   <a th:href="@{'/owners/' + ${owner.id} + '/pets/new'}">Add New Pet</a></p>
+
+<h3>Pets and Visits</h3>
+<table border="1" cellpadding="6">
+    <thead>
+    <tr><th>Name</th><th>Birth Date</th><th>Type</th><th>Visits</th><th></th></tr>
+    </thead>
+    <tbody>
+    <tr th:each="pet : ${owner.pets}">
+        <td th:text="${pet.name}">Name</td>
+        <td th:text="${pet.birthDate}">Birth Date</td>
+        <td th:text="${pet.type != null ? pet.type.name : ''}">Type</td>
+        <td>
+            <ul>
+                <li th:each="visit : ${pet.visits}"
+                    th:text="${visit.visitDate} + ' - ' + ${visit.description}"></li>
+            </ul>
+        </td>
+        <td>
+            <a th:href="@{'/owners/' + ${owner.id} + '/pets/' + ${pet.id} + '/edit'}">Edit Pet</a> |
+            <a th:href="@{'/owners/' + ${owner.id} + '/pets/' + ${pet.id} + '/visits/new'}">Add Visit</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
