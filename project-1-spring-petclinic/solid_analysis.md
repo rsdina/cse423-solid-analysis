@@ -55,23 +55,6 @@ addVisit()
 
 This isn't automatically a SOLID violation, but it means the domain entity contains both state and domain behavior.
 
-### Important correction to your existing README
-
-Your current root README says:
-
-> "OwnerController ... adheres to SRP"
-
-and:
-
-> "OwnerRepository ... satisfies DIP"
-
-Those statements are **too strong** for a SOLID analysis.
-
-A repository interface existing by itself does not automatically prove DIP. The historical controller is still directly coupled to `OwnerRepository`.
-
-So **we should modify that README**.
-
----
 
 # 3. V1 analysis
 
